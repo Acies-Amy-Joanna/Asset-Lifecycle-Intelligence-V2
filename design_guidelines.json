@@ -1,0 +1,253 @@
+{
+  "app_name": "ALI – Customer Intelligence Platform",
+  "app_type": "dashboard / saas_app",
+  "design_archetype": "Swiss High-Contrast Performance SaaS Analytics",
+  "theme_strategy": "Dual-tone Enterprise Slate: Crisp High-Legibility Light Surface with Deep Navy/Slate Navigation Sidebar",
+  "typography": {
+    "font_family_heading": "Plus Jakarta Sans, Outfit, -apple-system, sans-serif",
+    "font_family_body": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+    "font_family_mono": "JetBrains Mono, Source Code Pro, monospace",
+    "hierarchy": {
+      "h1_hero": "text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100",
+      "h2_section": "text-xl sm:text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100",
+      "h3_subsection": "text-lg font-semibold text-slate-800 dark:text-slate-200",
+      "h4_card_title": "text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400",
+      "body": "text-sm leading-relaxed text-slate-600 dark:text-slate-300",
+      "caption_label": "text-xs font-medium text-slate-500 dark:text-slate-400"
+    }
+  },
+  "colors": {
+    "base": {
+      "page_bg": "#F8FAFC",
+      "card_bg": "#FFFFFF",
+      "sidebar_bg": "#0F172A",
+      "sidebar_fg": "#F8FAFC",
+      "header_bg": "rgba(255, 255, 255, 0.85)",
+      "border": "#E2E8F0",
+      "divider": "#F1F5F9"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#64748B",
+      "inverted": "#F8FAFC"
+    },
+    "brand_primary": {
+      "default": "#2563EB",
+      "hover": "#1D4ED8",
+      "light_bg": "#EFF6FF",
+      "border": "#BFDBFE"
+    },
+    "semantic_status": {
+      "healthy": {
+        "label": "Healthy / Positive",
+        "text": "#047857",
+        "bg": "#ECFDF5",
+        "border": "#A7F3D0",
+        "badge": "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800",
+        "chart_color": "#10B981"
+      },
+      "monitor": {
+        "label": "Monitor / Attention Required",
+        "text": "#B45309",
+        "bg": "#FFFBEB",
+        "border": "#FDE68A",
+        "badge": "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-800",
+        "chart_color": "#F59E0B"
+      },
+      "at_risk": {
+        "label": "At Risk / Danger",
+        "text": "#B91C1C",
+        "bg": "#FEF2F2",
+        "border": "#FECACA",
+        "badge": "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/50 dark:text-rose-300 dark:border-rose-800",
+        "chart_color": "#EF4444"
+      },
+      "opportunity": {
+        "label": "Growth / Expansion",
+        "text": "#4338CA",
+        "bg": "#EEF2FF",
+        "border": "#C7D2FE",
+        "badge": "bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/50 dark:text-indigo-300 dark:border-indigo-800",
+        "chart_color": "#6366F1"
+      }
+    },
+    "charts": {
+      "series_1": "#2563EB",
+      "series_2": "#10B981",
+      "series_3": "#F59E0B",
+      "series_4": "#6366F1",
+      "series_5": "#EF4444",
+      "grid_lines": "#E2E8F0"
+    }
+  },
+  "layout_and_navigation": {
+    "sidebar": {
+      "width": "260px",
+      "style": "Fixed left column, slate-900 dark background, subtle active indicators with blue glow",
+      "nav_items": [
+        { "id": "overview", "label": "Overview", "icon": "LayoutDashboard" },
+        { "id": "customers", "label": "Customers", "icon": "Users" },
+        { "id": "customer_360", "label": "Customer 360", "icon": "UserCheck" },
+        { "id": "adoption", "label": "Adoption & Utilization", "icon": "BarChart3" },
+        { "id": "health_renewal", "label": "Health & Renewal", "icon": "Activity" },
+        { "id": "growth", "label": "Growth & Expansion", "icon": "TrendingUp" },
+        { "id": "actions", "label": "Actions", "icon": "CheckSquare" }
+      ]
+    },
+    "top_header": {
+      "height": "64px",
+      "style": "Sticky top bar, white with backdrop blur, 1px bottom border (#E2E8F0)",
+      "elements": [
+        "ALI Brand Logo + Platform Tagline",
+        "Current Active Page Title & Breadcrumbs",
+        "Global Customer / Metric Search Bar (⌘K)",
+        "Notification Bell with Risk Alert Badge",
+        "User Profile Dropdown (Role: Head of CS / Account Director)"
+      ]
+    },
+    "grid_system": "Dashboard Bento Grid with gap-6, auto-responsive flex & grid containers"
+  },
+  "screen_specifications": {
+    "overview": {
+      "title": "Executive Overview",
+      "description": "High-level aggregate customer health, ARR risk distribution, top signals, and recommended actions queue.",
+      "components": [
+        "KPI Cards Row (Total ARR, Portfolio Health Index, ARR At Risk, Expansion Pipeline)",
+        "Health Distribution Chart (Donut + Stacked Segment Bar)",
+        "ARR At Risk vs Expansion Opportunity Summary Widget",
+        "Top AI Intelligence Signals Feed",
+        "High Priority Actions Quick Action Queue"
+      ]
+    },
+    "customers": {
+      "title": "Customer Directory & Portfolio",
+      "description": "Filterable and sortable list of all enterprise B2B customer accounts.",
+      "components": [
+        "Multi-select Filter Bar (Health Status, ARR Range, Renewal Window, Segment, CSM)",
+        "Filter Chips Bar with Clear All option",
+        "Data Table with columns: Account Name, Industry, ARR, Health Score, License Utilization, Active Users, Renewal Date, Priority Badge, Quick Action button",
+        "Pagination & Results Counter"
+      ]
+    },
+    "customer_360": {
+      "title": "Customer 360 Degree View",
+      "description": "Deep-dive analytical drill-down into an individual B2B customer account.",
+      "components": [
+        "Customer Header Banner (Logo, Name, Industry, ARR, CSM, Contract Dates, Health Badge)",
+        "Health Score Trend Line (12-month historical trend)",
+        "Udemy-style Product Adoption Breakdown (Course completions, active learner seats, top departments)",
+        "License Utilization Seat Bar (Allocated vs Active vs Assigned)",
+        "Stakeholder & Account Contacts Matrix",
+        "Evidence-backed Insight Cards Stream"
+      ]
+    },
+    "adoption": {
+      "title": "Adoption & Product Utilization",
+      "description": "Granular metrics on product usage patterns, DAU/WAU/MAU ratios, and learning content adoption.",
+      "components": [
+        "DAU / WAU / MAU Engagement Ratio Line Chart",
+        "Seat Utilization vs Contracted Capacity Bar Chart",
+        "Feature Adoption & Course Category Heatmap",
+        "Inactive License Risk List"
+      ]
+    },
+    "health_renewal": {
+      "title": "Health & Renewal Analytics",
+      "description": "Risk detection and renewal timeline forecasting.",
+      "components": [
+        "Scatter Plot: Health Score (X-axis) vs License Utilization % (Y-axis) with quadrants",
+        "Renewal Timeline Buckets (0-30 Days, 31-60 Days, 61-90 Days, 90+ Days)",
+        "Risk Drivers Breakdown (Executive departure, usage drop, support ticket spike)",
+        "Renewal Risk Matrix Table"
+      ]
+    },
+    "growth": {
+      "title": "Growth & Expansion Intelligence",
+      "description": "Identifying upsell, cross-sell, and seat expansion opportunities.",
+      "components": [
+        "Expansion Opportunity Pipeline Summary",
+        "License Cap Threshold Alerts (Accounts at >90% license capacity)",
+        "Course/Skill Expansion Signals",
+        "Estimated Opportunity ARR Potential Cards"
+      ]
+    },
+    "actions": {
+      "title": "Action Center & Playbooks",
+      "description": "Prioritized workflow queue for Customer Success and Sales teams.",
+      "components": [
+        "Action Queue Filter (Status: Open/In Progress/Closed, Priority: High/Med/Low)",
+        "Action Detail Drawer / Modal (Core flow: What happened -> Why -> Evidence -> Business Impact -> Recommended Playbook Action)",
+        "Action Owner Assignment & Due Date Controls"
+      ]
+    }
+  },
+  "core_intelligence_flow": {
+    "steps": [
+      "1. Raw Data (Logins, course completes, seat assignments, support tickets)",
+      "2. Metrics (DAU/WAU ratio, utilization %, health score 0-100)",
+      "3. Signals (25% drop in weekly active learners, executive sponsor change)",
+      "4. Insights (High churn probability before Q3 renewal)",
+      "5. Risks / Opportunities (ARR at risk: $120K / Expansion potential: $45K)",
+      "6. Why + Evidence (Key department stopped logging in 3 weeks ago; license usage dropped from 85% to 42%)",
+      "7. Recommended Action (Schedule Executive QBR & send tailored manager engagement report)"
+    ]
+  },
+  "component_styling": {
+    "card": "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-xs hover:shadow-md transition-all duration-200",
+    "kpi_card": "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col justify-between hover:border-slate-300 transition-all",
+    "badge": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border",
+    "table": "w-full text-left text-sm border-collapse",
+    "table_header": "bg-slate-50 dark:bg-slate-800/60 text-slate-500 font-semibold uppercase tracking-wider text-xs border-b border-slate-200 dark:border-slate-700 p-3.5",
+    "table_row": "border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors p-3.5",
+    "button_primary": "bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-4 py-2 rounded-lg shadow-xs transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-1",
+    "button_secondary": "bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium text-sm px-4 py-2 rounded-lg transition-colors"
+  },
+  "image_urls": {
+    "customer_logos": [
+      {
+        "name": "Acme Corp",
+        "url": "https://images.unsplash.com/photo-1765081598525-626148ec885c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxiMmIlMjBidXNpbmVzcyUyMGN1c3RvbWVyJTIwbG9nbyUyMGNvcnBvcmF0ZSUyMGljb258ZW58MHx8fHwxNzg5NzI4NjUyfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Customer Logo Avatar"
+      },
+      {
+        "name": "TechStart Inc",
+        "url": "https://images.unsplash.com/photo-1618242579640-44870fefec88?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxiMmIlMjBidXNpbmVzcyUyMGN1c3RvbWVyJTIwbG9nbyUyMGNvcnBvcmF0ZSUyMGljb258ZW58MHx8fHwxNzg5NzI4NjUyfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Customer Logo Avatar"
+      },
+      {
+        "name": "Global Retail Group",
+        "url": "https://images.pexels.com/photos/24644155/pexels-photo-24644155.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Enterprise Customer Building"
+      }
+    ]
+  },
+  "testing_and_accessibility": {
+    "data_testid_rules": "All interactive elements (buttons, inputs, dropdown items, table rows, tab triggers, filter chips, action drawers, chart containers) MUST include data-testid attributes.",
+    "data_testid_examples": [
+      "data-testid=\"sidebar-nav-overview\"",
+      "data-testid=\"sidebar-nav-customers\"",
+      "data-testid=\"kpi-card-total-arr\"",
+      "data-testid=\"customer-filter-health-status\"",
+      "data-testid=\"customer-search-input\"",
+      "data-testid=\"customer-row-acme-corp\"",
+      "data-testid=\"action-drawer-open-button\"",
+      "data-testid=\"action-drawer-close-button\"",
+      "data-testid=\"action-execute-playbook-button\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build a cohesive React application for ALI – Customer Intelligence Platform with the 7 key navigation views.",
+    "Follow the semantic status color system strictly: Green (Healthy), Amber (Monitor), Red (At Risk), Indigo (Expansion).",
+    "Ensure data tables are sortable, filterable, searchable, and paginated with filter chips.",
+    "Implement the full evidence-backed intelligence flow in drill-down cards and drawers (What happened -> Why -> Evidence -> Business Impact -> Recommended Action).",
+    "Ensure all interactive components include data-testid attributes for automated testing."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Avoid generic AI slop centered layouts; stick to clean enterprise B2B grid architectures.",
+    "Ensure high text legibility and strict APCA/WCAG contrast ratios.",
+    "Use generous card padding (p-5 or p-6) and clear border definitions.",
+    "Provide interactive micro-states on cards, hover lifts, and transition states for button presses.",
+    "Always set data-testid attributes on key navigation and interactive elements."
+  ]
+}
